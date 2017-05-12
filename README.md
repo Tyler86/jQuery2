@@ -37,7 +37,7 @@ Now that we've made our basic files, we want to get them all hooked together in 
 #Step 2
 ###Time For jQuery
 
-Now that we have our environment set up and our markup written, it's time to use some jQuery. 
+Now that we have our environment set up and our markup written, it's time to use some jQuery.
 
 The first thing we want to do is go into our scripts.js file and create our document ready function:
 
@@ -81,17 +81,28 @@ The next thing we want is the ability for a user to write a todo task into our i
 
 Let's hop over to our index.html and create a space for them to type in their list items.
 
+
+
+
+
+
 *index.html*
 ```html
 <section id="newTaskForm">
 	<h3 class="todo-form-title">New To Do </h3>
 	<div  class="form-input-container">
 		<img id="cancel" src="./img/icons/cross.png" alt="close form icon">
+
 		<input id="newItemInput" class="todo-title-input form-input" type="text" placeholder="To-Do Title">
 		<button  id="saveNewItem" class="complete-todo-button">Add To Do</button>
 	</div>
 </section>
 ```
+
+
+
+
+
 
 This will create a form with a save and cancel button. We want to give the save and cancel buttons IDs so that we can call them with jQuery. We also want to give the form an ID so it can be accessed as well.
 
@@ -274,7 +285,8 @@ var advanceTask = function(task) {
     if (listo[i].task === modified) {
       if (listo[i].id === 'new') {
         listo[i].id = 'inProgress';
-      } else if (listo[i].id === 'inProgress') {
+      }
+      else if (listo[i].id === 'inProgress') {
         listo[i].id = 'archived';
       } else {
         listo.splice(i, 1);
